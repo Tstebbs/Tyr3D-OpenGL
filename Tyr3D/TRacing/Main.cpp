@@ -1,8 +1,9 @@
 #include <iostream>
+#include "Core.h"
 
 int main() {
     std::cout << "Quick test: Tyr3D_Game is running!" << std::endl;
-    return 0;
 
-   
+   Tyr3D::Core::CreateWindow(800, 600);
 }
+ 
