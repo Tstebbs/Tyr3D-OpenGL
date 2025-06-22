@@ -70,11 +70,23 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\include;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLFW\glfw-3.4\glfw-3.4\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\include;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLFW\glfw-3.4\glfw-3.4\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\include;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLFW\glfw-3.4\glfw-3.4\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\include;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLFW\glfw-3.4\glfw-3.4\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_STATIC;GLFW_INCLUDE_NONE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Libraries\GLFW\glfw-3.4\include</AdditionalIncludeDirectories>
     </ClCompile>
@@ -89,7 +101,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_STATIC;GLFW_INCLUDE_NONE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Libraries\GLFW\glfw-3.4\include</AdditionalIncludeDirectories>
     </ClCompile>
@@ -102,7 +114,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_STATIC;GLFW_INCLUDE_NONE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Libraries\GLFW\glfw-3.4\include</AdditionalIncludeDirectories>
     </ClCompile>
@@ -117,7 +129,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_STATIC;GLFW_INCLUDE_NONE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Libraries\GLFW\glfw-3.4\include</AdditionalIncludeDirectories>
     </ClCompile>
