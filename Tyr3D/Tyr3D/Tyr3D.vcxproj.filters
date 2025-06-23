@@ -18,6 +18,9 @@
     <ClCompile Include="src\Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Libraries\GLAD\glad\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core.h">
