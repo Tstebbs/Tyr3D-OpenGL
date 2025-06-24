@@ -125,7 +125,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLFW_STATIC;GLFW_INCLUDE_NONE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\src;$(ProjectDir)Libraries\GLAD\glad\include;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLFW\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLM\glm-1.0.1;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\src;$(ProjectDir)Libraries\GLAD\glad\include;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLFW\glfw-3.4.bin.WIN64\glfw-3.4.bin.WIN64\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

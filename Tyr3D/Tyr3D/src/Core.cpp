@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 #include "Core.h"
 #include <iostream>
+#include <glm/glm.hpp>
 
 namespace Tyr3D
 {
@@ -15,7 +16,6 @@ namespace Tyr3D
 			std::cout << "Window Failed";
 			glfwTerminate();
 			return;
-			
 		}
 		
 		glfwMakeContextCurrent(window);
