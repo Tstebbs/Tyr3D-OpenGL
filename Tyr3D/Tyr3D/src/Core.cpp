@@ -5,10 +5,10 @@
 
 namespace Tyr3D
 {
-	void Core::CreateWindow(int width, int height)
+	void Core::CreateWindow(int width, int height, const char* name)
 	{
 		glfwInit();
-		GLFWwindow* window = glfwCreateWindow(1240, 1000, "My Title", NULL, NULL);
+		GLFWwindow* window = glfwCreateWindow(1240, 1000, name, NULL, NULL);
 
 		if (window == NULL)
 		{
@@ -20,21 +20,28 @@ namespace Tyr3D
 		
 		glfwMakeContextCurrent(window);
 
-		while (!glfwWindowShouldClose(window))
-		{
-			glfwSwapBuffers(window);
-			glfwPollEvents();
-		}
-
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{
 			std::cerr << "ERROR: gladLoadGLLoader failed\n";
 			return;
 		}
 
+		while (!glfwWindowShouldClose(window))
+		{
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			glClearColor(0.3f, 0.4f, 0.8f, 1.0f);
+			glfwSwapBuffers(window);
+			glfwPollEvents();
+		}
+		
+		
+
 		glfwDestroyWindow(window);
 		glfwTerminate();
 		return;
 	}
+
+
+
 }
 
