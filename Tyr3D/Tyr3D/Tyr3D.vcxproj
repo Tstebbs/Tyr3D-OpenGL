@@ -20,9 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Libraries\GLAD\glad\src\glad.c" />
+    <ClCompile Include="Shape.cpp" />
     <ClCompile Include="src\Core.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Shape.h" />
     <ClInclude Include="src\Core.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
