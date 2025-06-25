@@ -19,11 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Libraries\GLAD\glad\src\glad.c" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="src\Core.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="src\Core.h" />
   </ItemGroup>

@@ -1,0 +1,17 @@
+#pragma once
+#include <memory>
+
+namespace Tyr3D
+{
+	class GameObject;
+
+	class Component
+	{
+	public:
+		virtual void Start();
+		virtual void Update(float dt);
+	protected:
+		GameObject* owner;
+	};
+
+}
