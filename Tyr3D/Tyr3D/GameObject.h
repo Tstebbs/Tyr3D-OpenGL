@@ -12,7 +12,7 @@ namespace Tyr3D
 		void Start();
 		void Update(float dt);
 
-
+		//add component & get component must be in header
 		template<typename T>
 		T* AddComponent()
 		{
@@ -27,7 +27,7 @@ namespace Tyr3D
 		{
 			const std::type_info& targetType = typeid(T);
 
-			for (auto& components : memberComponents)
+			for (auto& component : memberComponents)
 			{
 				const std::type_info& componentType = typeid(*component);
 				if (targetType == componentType) {
