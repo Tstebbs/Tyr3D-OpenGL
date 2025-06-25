@@ -16,8 +16,11 @@ namespace Tyr3D
 		template<typename T>
 		T* AddComponent()
 		{
+			//makes unique pointer to this game object
 			std::unique_ptr<T> uP =std::make_unique<T>(this);
+			//sets template class pointer to point to game object
 			T* p = uP.get();
+			//adds component to  vector of components attached to this game object
 			memberComponents.push_back(std::move(uP));
 			return p;
 		}
