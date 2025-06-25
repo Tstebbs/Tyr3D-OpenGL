@@ -129,12 +129,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Tyr3D\Tyr3D.vcxproj">
       <Project>{52c2ae2c-24f2-4382-92a5-3aaa19751fe8}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tgame.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tgame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
