@@ -13,13 +13,13 @@ namespace Tyr3D
 		virtual void Start();
 		virtual void Update(float dt);
 
-		glm::vec3 GetPosition();
+		const glm::vec3 GetPosition();
 		void SetPosition(glm::vec3 pos);
 
-		glm::vec3 GetRotation();
+		const glm::vec3 GetRotation();
 		void SetRotation(glm::vec3 rotation);
 
-		glm::vec3 GetScale();
+		const glm::vec3 GetScale();
 		void SetScale(glm::vec3 scale);
 
 	protected:
