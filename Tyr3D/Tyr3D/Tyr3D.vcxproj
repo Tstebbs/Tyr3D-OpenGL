@@ -23,7 +23,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Libraries\GLAD\glad\src\glad.c" />
     <ClCompile Include="RenderComponent.cpp" />
-    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="src\Core.cpp" />
     <ClCompile Include="TransformComponent.cpp" />
   </ItemGroup>
@@ -31,7 +31,7 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="RenderComponent.h" />
-    <ClInclude Include="Shape.h" />
+    <ClInclude Include="Renderer.h" />
     <ClInclude Include="src\Core.h" />
     <ClInclude Include="TransformComponent.h" />
   </ItemGroup>

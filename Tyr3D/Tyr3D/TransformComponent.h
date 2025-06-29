@@ -22,6 +22,8 @@ namespace Tyr3D
 		const glm::vec3 GetScale();
 		void SetScale(glm::vec3 scale);
 
+		const glm::mat4 GetTransformationMatrix();
+
 	protected:
 		glm::vec3 position{ 0.0f, 0.0f, 0.0f };
 		glm::vec3 rotation{ 0.0f, 0.0f, 0.0f }; 
