@@ -26,6 +26,7 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="src\Core.cpp" />
     <ClCompile Include="TransformComponent.cpp" />
+    <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.h" />
@@ -34,6 +35,7 @@
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="src\Core.h" />
     <ClInclude Include="TransformComponent.h" />
+    <ClInclude Include="VertexBuffer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
