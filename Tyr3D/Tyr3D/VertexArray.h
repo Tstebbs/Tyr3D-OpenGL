@@ -1,5 +1,5 @@
 #pragma once
-
+#include "VertexBuffer.h"
 
 
 namespace Tyr3D
@@ -12,6 +12,8 @@ namespace Tyr3D
 		VertexArray();
 		~VertexArray();
 
+		void addVBuffer(const VertexBuffer& vbuff, const VertexBufferLayout& layout);
+	 
 	};
 
 }
