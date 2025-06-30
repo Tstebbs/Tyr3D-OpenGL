@@ -21,20 +21,26 @@
   <ItemGroup>
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="IndexBuffer.cpp" />
     <ClCompile Include="Libraries\GLAD\glad\src\glad.c" />
     <ClCompile Include="RenderComponent.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="src\Core.cpp" />
     <ClCompile Include="TransformComponent.cpp" />
+    <ClCompile Include="VBufferLayout.cpp" />
+    <ClCompile Include="VertexArray.cpp" />
     <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="RenderComponent.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="src\Core.h" />
     <ClInclude Include="TransformComponent.h" />
+    <ClInclude Include="VBufferLayout.h" />
+    <ClInclude Include="VertexArray.h" />
     <ClInclude Include="VertexBuffer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
