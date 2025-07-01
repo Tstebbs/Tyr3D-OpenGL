@@ -15,12 +15,12 @@ namespace Tyr3D
 	{
 		if constexpr (std::is_same_v <T, GL_FLOAT>)
 		{
-			memElements.emplace_back(GL_FLOAT,count,false);
+			memElements.emplace_back(GL_FLOAT,count,GL_FALSE);
 			stride += sizeof(GLfloat);
 		}
 		else if constexpr (std::is_same_v<T, GL_UNSIGNED_INT>)
 		{
-			memElements.emplace_back(GL_UNSIGNED_INT, count, false);
+			memElements.emplace_back(GL_UNSIGNED_INT, count, GL_FALSE);
 			stride += sizeof(GLuint);
 		}
 		else

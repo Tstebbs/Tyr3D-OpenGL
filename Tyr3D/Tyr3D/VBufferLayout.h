@@ -13,6 +13,12 @@ namespace Tyr3D
 		unsigned int type;
 		unsigned int count;
 		bool isnormalised;
+
+		static unsigned int getSizeofType()
+		{
+			//for now no change in types size as char not supported
+			return 4;
+		}
 	};
 
 
