@@ -15,13 +15,13 @@ namespace Tyr3D
 		glDeleteBuffers(1, &rendererID);
 	}
 
-	void VertexBuffer::Bind()
+	void VertexBuffer::Bind() const
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, rendererID);
 	}
 
-	void VertexBuffer::Unbind()
+	void VertexBuffer::Unbind() const
 	{
-		(GL_ARRAY_BUFFER, rendererID);
+		//(GL_ARRAY_BUFFER, rendererID);
 	}
 }
