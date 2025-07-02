@@ -14,7 +14,6 @@ namespace Tyr3D
 	{
 	public:
 		//shader?
-
 		const void Draw(const VertexArray& va, const IndexBuffer& ib) const;
 	};
 

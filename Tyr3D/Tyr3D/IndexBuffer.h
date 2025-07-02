@@ -14,7 +14,7 @@ namespace Tyr3D
 		void Bind() const;
 		void Unbind() const;
 
-		const unsigned int GetCount();
+		unsigned int GetCount() const;
 	};
 
 }

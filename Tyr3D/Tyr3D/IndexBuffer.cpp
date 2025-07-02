@@ -25,7 +25,8 @@ namespace Tyr3D
 	{
 		(GL_ARRAY_BUFFER, rendererID);
 	}
-	const unsigned int IndexBuffer::GetCount()
+
+	unsigned int IndexBuffer::GetCount() const
 	{
 		return iCount;
 	}
