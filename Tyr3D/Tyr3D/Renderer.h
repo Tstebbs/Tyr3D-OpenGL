@@ -4,6 +4,7 @@
 #include<glad/glad.h>
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
+#include "VertexArray.h"
 
 
 
@@ -14,7 +15,7 @@ namespace Tyr3D
 	public:
 		//shader?
 
-		//const void Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const;
+		const void Draw(const VertexArray& va, const IndexBuffer& ib) const;
 	};
 
 }

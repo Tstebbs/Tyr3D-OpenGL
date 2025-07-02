@@ -15,7 +15,7 @@ namespace Tyr3D
 
 		void addVBuffer(const VertexBuffer& vbuff, const VBufferLayout& layout);
 		void bind() const;
-			void unbind() const;
+		void unbind() const;
 	};
 
 }
