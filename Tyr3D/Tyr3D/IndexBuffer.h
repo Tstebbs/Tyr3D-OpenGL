@@ -1,8 +1,5 @@
 #pragma once
 
-
-
-
 namespace Tyr3D
 {
 	class IndexBuffer
