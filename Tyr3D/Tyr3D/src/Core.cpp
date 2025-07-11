@@ -6,42 +6,63 @@
 
 namespace Tyr3D
 {
-	void Core::CreateWindow(int width, int height, const char* name)
+	class Core
 	{
-		glfwInit();
-		GLFWwindow* window = glfwCreateWindow(1240, 1000, name, NULL, NULL);
+		float lastFrameTime = 0.0;
+		GLFWwindow* window;
+		float dt;
 
-		if (window == NULL)
+		void CreateWindow(int width, int height, const char* name)
 		{
-			std::cout << "Window Failed";
+			glfwInit();
+			glfwSetTime(0.0);
+
+			window = glfwCreateWindow(1240, 1000, name, NULL, NULL);
+
+			if (window == NULL)
+			{
+				std::cout << "Window Failed";
+				glfwTerminate();
+				return;
+			}
+
+			glfwMakeContextCurrent(window);
+
+			if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+			{
+				std::cerr << "ERROR: gladLoadGLLoader failed\n";
+				return;
+			}
+
+
+
+			glfwDestroyWindow(window);
 			glfwTerminate();
 			return;
 		}
-		
-		glfwMakeContextCurrent(window);
 
-		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+		void Run()
 		{
-			std::cerr << "ERROR: gladLoadGLLoader failed\n";
-			return;
+			dt = CalcDelta();
+			while (!glfwWindowShouldClose(window))
+			{
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+				glClearColor(0.3f, 0.4f, 0.8f, 1.0f);
+				glfwSwapBuffers(window);
+				glfwPollEvents();
+			}
 		}
 
-		while (!glfwWindowShouldClose(window))
+
+		float CalcDelta()
 		{
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			glClearColor(0.3f, 0.4f, 0.8f, 1.0f);
-			glfwSwapBuffers(window);
-			glfwPollEvents();
+			float currTime = glfwGetTime();
+			float dt = currTime - lastFrameTime;
+			lastFrameTime = currTime;
+			return dt;
 		}
-		
-		
-
-		glfwDestroyWindow(window);
-		glfwTerminate();
-		return;
-	}
 
 
-
+	};
 }
 
