@@ -6,19 +6,19 @@
 
 namespace Tyr3D
 {
-	class Core
-	{
+	
 		float lastFrameTime = 0.0;
 		GLFWwindow* window;
 		float dt;
 
-		void CreateWindow(int width, int height, const char* name)
+		void Core::CreateWindow(int width, int height, const char* name)
 		{
 			glfwInit();
 			glfwSetTime(0.0);
 
 			window = glfwCreateWindow(1240, 1000, name, NULL, NULL);
-
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			glClearColor(0.3f, 0.4f, 0.8f, 1.0f);
 			if (window == NULL)
 			{
 				std::cout << "Window Failed";
@@ -41,20 +41,19 @@ namespace Tyr3D
 			return;
 		}
 
-		void Run()
+		void Core::Run()
 		{
 			dt = CalcDelta();
 			while (!glfwWindowShouldClose(window))
 			{
-				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-				glClearColor(0.3f, 0.4f, 0.8f, 1.0f);
+	
 				glfwSwapBuffers(window);
 				glfwPollEvents();
 			}
 		}
 
 
-		float CalcDelta()
+		float Core::CalcDelta()
 		{
 			float currTime = glfwGetTime();
 			float dt = currTime - lastFrameTime;
@@ -62,7 +61,5 @@ namespace Tyr3D
 			return dt;
 		}
 
-
-	};
 }
 
