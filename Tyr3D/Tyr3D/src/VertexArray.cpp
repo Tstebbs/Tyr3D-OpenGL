@@ -16,6 +16,7 @@ namespace Tyr3D
 
 	void VertexArray::addVBuffer(const VertexBuffer& vbuff, const VBufferLayout& layout)
 	{
+		bind();
 		vbuff.Bind();
 		const auto& elements = layout.GetElements();
 		unsigned int offset = 0;
