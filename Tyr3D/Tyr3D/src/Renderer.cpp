@@ -3,11 +3,24 @@
 
 namespace Tyr3D
 {
-	const void Draw(const VertexArray& va, const IndexBuffer& ib)
+	
+	void Renderer::DrawAll()
 	{
-		va.bind();
-		ib.Bind();
+		for (RenderComponent* rComp : components )
+		{
+			//loops through all render components drawing them
+			rComp->Draw();
+		}
 
-		glDrawElements(GL_TRIANGLES, ib.GetCount(), GL_UNSIGNED_INT, nullptr);
+	}
+
+	void Renderer::AddComponents(RenderComponent* rComp)
+	{
+		components.push_back(rComp);//adds render components to vector
+	}
+
+	void Renderer::RemoveComponents(RenderComponent* rComp)
+	{
+		//TODO
 	}
 }

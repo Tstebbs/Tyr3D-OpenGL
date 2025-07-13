@@ -5,6 +5,7 @@
 #include <glm/gtc/quaternion.hpp> 
 
 
+
 namespace Tyr3D
 {
 	void TransformComponent::Start()

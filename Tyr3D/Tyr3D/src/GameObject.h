@@ -9,8 +9,8 @@ namespace Tyr3D
 	{
 
 	public:
-		void Start();
-		void Update(float dt);
+		virtual void Start();
+		virtual void Update(float dt);
 
 		//add component & get component must be in header
 		template<typename T>

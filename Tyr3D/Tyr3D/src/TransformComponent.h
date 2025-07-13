@@ -1,6 +1,6 @@
 #pragma once
 #include "Component.h"
-#include <glm/glm.hpp> 
+#include <glm/glm.hpp>
 
 namespace Tyr3D
 {

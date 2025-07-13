@@ -6,11 +6,14 @@
 
 namespace Tyr3D
 {
+	Renderer renderer;
+
 	Core::Core()
 	{
 		lastFrameTime = 0.0f;
 		dt = 0.0f;
 		window=nullptr;
+		
 	}
 
 	Core::~Core()
@@ -53,7 +56,7 @@ namespace Tyr3D
 		{
 			dt = CalcDelta();
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+			renderer.DrawAll();
 			glfwSwapBuffers(window);
 			glfwPollEvents();
 		}
