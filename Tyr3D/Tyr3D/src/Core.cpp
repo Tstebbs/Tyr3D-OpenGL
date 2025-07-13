@@ -6,60 +6,70 @@
 
 namespace Tyr3D
 {
-	
-		float lastFrameTime = 0.0;
-		GLFWwindow* window;
-		float dt;
+	Core::Core()
+	{
+		lastFrameTime = 0.0f;
+		dt = 0.0f;
+		window=nullptr;
+	}
 
-		void Core::CreateWindow(int width, int height, const char* name)
+	Core::~Core()
+	{
+
+	}
+
+	void Core::CreateWindow(int width, int height, const char* name)
+	{
+		glfwInit();
+		glfwSetTime(0.0);
+
+		window = glfwCreateWindow(1240, 1000, name, NULL, NULL);
+		
+		if (window == NULL)
 		{
-			glfwInit();
-			glfwSetTime(0.0);
-
-			window = glfwCreateWindow(1240, 1000, name, NULL, NULL);
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			glClearColor(0.3f, 0.4f, 0.8f, 1.0f);
-			if (window == NULL)
-			{
-				std::cout << "Window Failed";
-				glfwTerminate();
-				return;
-			}
-
-			glfwMakeContextCurrent(window);
-
-			if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-			{
-				std::cerr << "ERROR: gladLoadGLLoader failed\n";
-				return;
-			}
-
-
-
-			glfwDestroyWindow(window);
+			std::cout << "Window Failed";
 			glfwTerminate();
 			return;
 		}
 
-		void Core::Run()
+		glfwMakeContextCurrent(window);
+
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+		{
+			std::cerr << "ERROR: gladLoadGLLoader failed\n";
+			return;
+		}
+
+		glClearColor(0.3f, 0.4f, 0.8f, 1.0f);
+
+
+	}
+
+	void Core::Run()
+	{
+		CreateWindow(800, 600, "Game");
+		
+		while (!glfwWindowShouldClose(window))
 		{
 			dt = CalcDelta();
-			while (!glfwWindowShouldClose(window))
-			{
-	
-				glfwSwapBuffers(window);
-				glfwPollEvents();
-			}
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+			glfwSwapBuffers(window);
+			glfwPollEvents();
 		}
 
+		glfwDestroyWindow(window);
+		glfwTerminate();
+	}
 
-		float Core::CalcDelta()
-		{
-			float currTime = glfwGetTime();
-			float dt = currTime - lastFrameTime;
-			lastFrameTime = currTime;
-			return dt;
-		}
+
+	float Core::CalcDelta()
+	{
+		float currTime = glfwGetTime();
+		float dt = currTime - lastFrameTime;
+		lastFrameTime = currTime;
+		return dt;
+	}
 
 }
 

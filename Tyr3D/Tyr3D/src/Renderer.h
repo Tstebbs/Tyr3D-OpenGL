@@ -6,8 +6,6 @@
 #include "IndexBuffer.h"
 #include "VertexArray.h"
 
-
-
 namespace Tyr3D
 {
 	class Renderer
