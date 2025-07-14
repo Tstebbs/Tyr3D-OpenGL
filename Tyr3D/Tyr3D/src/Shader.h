@@ -1,9 +1,7 @@
 #pragma once
 #include <iostream>
-#include <glm/glm.hpp>
-
-#include "src/Renderer.h"
-
+#include <glad/glad.h>      
+//#include <glm/glm.hpp>
 
 
 namespace Tyr3D
@@ -11,19 +9,20 @@ namespace Tyr3D
 	class Shader
 	{
 	public:
-		Shader(const std::string& filepath);
-		~Shader();
+		Shader(const std::string& filepathvs,const std::string& filepathfrag);
+		~Shader(); 
 	
 		void Bind() const;
 		void Unbind() const;
 
-		void SetUniform4f(std::string& name, glm::vec4 vec4);
+		void SetUniform4f(const std::string& name, float v1,float v2,float v3, float v4) const;
+
 	private:
 		unsigned int rendererID;
 		std::string memFilepath;
-		unsigned int GetUniformLoc(const std::string& name);
+		int GetUniformLoc(const std::string& name) const;
 	
-		static void ParseShader(const std::string& filepath);
+		std::string ReadShader(const std::string& filepath);
 		unsigned int CreateShader(const std::string& vertexShader, const std::string& fragShader);
 		unsigned int CompShader(unsigned int type, const std::string& src);
 

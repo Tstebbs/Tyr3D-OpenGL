@@ -8,7 +8,7 @@ namespace Tyr3D
 		iCount = count;
 		glGenBuffers(1, &rendererID);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, rendererID);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER,count*sizeof(GLuint),data,GL_STATIC_DRAW);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER,count*sizeof(unsigned int),data,GL_STATIC_DRAW);
 	}
 
 	IndexBuffer::~IndexBuffer()
@@ -18,12 +18,12 @@ namespace Tyr3D
 
 	void IndexBuffer::Bind() const
 	{
-		glBindBuffer(GL_ARRAY_BUFFER, rendererID);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, rendererID);
 	}
 
 	void IndexBuffer::Unbind() const
 	{
-		(GL_ARRAY_BUFFER, rendererID);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	}
 
 	unsigned int IndexBuffer::GetCount() const

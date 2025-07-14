@@ -23,5 +23,5 @@ namespace Tyr3D
 	private:
 		std::vector<RenderComponent*> components;
 	};
-
+	extern Renderer renderer;
 }

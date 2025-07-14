@@ -3,7 +3,8 @@
 
 namespace Tyr3D
 {
-	
+	Renderer renderer;
+
 	void Renderer::DrawAll()
 	{
 		for (RenderComponent* rComp : components )

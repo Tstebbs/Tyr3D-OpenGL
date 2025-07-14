@@ -6,8 +6,6 @@
 
 namespace Tyr3D
 {
-	Renderer renderer;
-
 	Core::Core()
 	{
 		lastFrameTime = 0.0f;
@@ -50,7 +48,7 @@ namespace Tyr3D
 
 	void Core::Run()
 	{
-		CreateWindow(800, 600, "Game");
+		//CreateWindow(800, 600, "Game");
 		
 		while (!glfwWindowShouldClose(window))
 		{

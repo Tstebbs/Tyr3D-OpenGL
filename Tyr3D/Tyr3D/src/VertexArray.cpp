@@ -1,5 +1,6 @@
 #include "VertexArray.h"
 #include "Renderer.h"
+#include <glad/glad.h>
 
 
 namespace Tyr3D

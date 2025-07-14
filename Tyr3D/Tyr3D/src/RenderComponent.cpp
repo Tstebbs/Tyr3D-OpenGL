@@ -1,5 +1,6 @@
 #include "RenderComponent.h"
 #include "Renderer.h"
+#include <string>
 
 namespace Tyr3D
 {
@@ -7,7 +8,9 @@ namespace Tyr3D
 
 	RenderComponent::RenderComponent(const float* verts, unsigned int vertSize,const unsigned int* indices, unsigned int idxCount)
 		:memVBuff(verts, vertSize),//as contructors have parameters they need to be initiliazed here
-		memIBuff(indices, idxCount)
+		memIBuff(indices, idxCount),
+		shader("res/Shaders/vertexShader.vs",
+			"res/Shaders/fragmentShader.frag")
 	{
 		memVArray.bind();
 		
@@ -18,6 +21,8 @@ namespace Tyr3D
 		memVArray.addVBuffer(memVBuff, memVBLayout);
 		
 		memIBuff.Bind();
+		shader.Bind();
+		shader.SetUniform4f("u_Color", 1, 0, 0, 1);
 		memVArray.unbind();
 	}
 
@@ -39,6 +44,7 @@ namespace Tyr3D
 
 	void RenderComponent::Draw()
 	{
+		shader.Bind();
 		memVArray.bind();
 		memIBuff.Bind();
 		glDrawElements(GL_TRIANGLES, memIBuff.GetCount(), GL_UNSIGNED_INT, nullptr);

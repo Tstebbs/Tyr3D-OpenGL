@@ -20,30 +20,34 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Libraries\GLAD\glad\src\glad.c" />
-    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="src\Component.cpp" />
     <ClCompile Include="src\GameObject.cpp" />
     <ClCompile Include="src\IndexBuffer.cpp" />
     <ClCompile Include="src\RenderComponent.cpp" />
     <ClCompile Include="src\Renderer.cpp" />
     <ClCompile Include="src\Core.cpp" />
+    <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\TransformComponent.cpp" />
     <ClCompile Include="src\VBufferLayout.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />
     <ClCompile Include="src\VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shader.h" />
     <ClInclude Include="src\Component.h" />
     <ClInclude Include="src\GameObject.h" />
     <ClInclude Include="src\IndexBuffer.h" />
     <ClInclude Include="src\RenderComponent.h" />
     <ClInclude Include="src\Renderer.h" />
     <ClInclude Include="src\Core.h" />
+    <ClInclude Include="src\Shader.h" />
     <ClInclude Include="src\TransformComponent.h" />
     <ClInclude Include="src\VBufferLayout.h" />
     <ClInclude Include="src\VertexArray.h" />
     <ClInclude Include="src\VertexBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragmentShader.frag" />
+    <None Include="vertexShader.vs" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -4,6 +4,8 @@
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
 #include "VBufferLayout.h"
+#include "Shader.h"
+
 
 namespace Tyr3D
 {
@@ -24,7 +26,7 @@ namespace Tyr3D
 		VertexBuffer memVBuff;
 		IndexBuffer memIBuff;
 		VBufferLayout memVBLayout;
-		 
+		Shader shader;
 
 	};
 }
