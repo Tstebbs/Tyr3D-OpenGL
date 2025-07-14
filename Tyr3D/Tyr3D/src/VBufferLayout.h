@@ -19,6 +19,8 @@ namespace Tyr3D
 			//for now no change in types size as char not supported
 			return 4;
 		}
+		
+		VBufferElement(unsigned int type,unsigned int count, bool isnormalised);
 	};
 
 

@@ -10,13 +10,13 @@ namespace Tyr3D
 	class RenderComponent : public Component
 	{
 	public:
-		RenderComponent(const float* verts, unsigned int vertSize,const unsigned int* indices, unsigned int idxCount);
+		RenderComponent(const float* verts, unsigned int vertSize, const unsigned int* indices, unsigned int idxCount);
 		~RenderComponent();
 
 
 		void Draw();
-		virtual void Start();
-		virtual void Update(float dt);
+		void Start();
+		void Update(float dt);
 
 
 	private:

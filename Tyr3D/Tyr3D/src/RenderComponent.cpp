@@ -3,6 +3,8 @@
 
 namespace Tyr3D
 {
+	
+
 	RenderComponent::RenderComponent(const float* verts, unsigned int vertSize,const unsigned int* indices, unsigned int idxCount)
 		:memVBuff(verts, vertSize),//as contructors have parameters they need to be initiliazed here
 		memIBuff(indices, idxCount)
@@ -18,7 +20,19 @@ namespace Tyr3D
 		memIBuff.Bind();
 		memVArray.unbind();
 	}
+
+
 	RenderComponent::~RenderComponent()
+	{
+
+	}
+
+	void RenderComponent::Start()
+	{
+
+	}
+
+	void RenderComponent::Update(float dt)
 	{
 
 	}

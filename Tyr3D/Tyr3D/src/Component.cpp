@@ -2,13 +2,13 @@
 
 namespace Tyr3D
 {
-	void Start()
-	{
+    void Component::Start()
+    {
+       
+    }
 
-	}
-
-	void Update(float dt)
-	{
-
-	}
+    void Component::Update(float dt)
+    {
+       
+    }
 }

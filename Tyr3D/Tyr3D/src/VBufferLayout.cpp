@@ -13,12 +13,12 @@ namespace Tyr3D
 	template<typename T>
 	void VBufferLayout::Push(int count)
 	{
-		if constexpr (std::is_same_v <T, GL_FLOAT>)
+		if constexpr (std::is_same_v <T, float>)
 		{
 			memElements.emplace_back(GL_FLOAT,count,GL_FALSE);
 			stride += sizeof(GLfloat);
 		}
-		else if constexpr (std::is_same_v<T, GL_UNSIGNED_INT>)
+		else if constexpr (std::is_same_v<T, unsigned int>)
 		{
 			memElements.emplace_back(GL_UNSIGNED_INT, count, GL_FALSE);
 			stride += sizeof(GLuint);
@@ -29,15 +29,25 @@ namespace Tyr3D
 		}
 	}
 
+	unsigned int VBufferLayout::GetStride() const
+	{
+		return stride;
+	}
+
+
 
 	std::vector<VBufferElement> VBufferLayout::GetElements() const
 	{
 		return memElements;
 	}
 
-	unsigned int VBufferLayout::GetStride() const
+	template void VBufferLayout::Push<float>(int);
+	template void VBufferLayout::Push<unsigned int>(int);
+	
+	VBufferElement::VBufferElement(unsigned int type, unsigned int count, bool isnormalised)
 	{
-		return stride;
+
 	}
 
 }
+
