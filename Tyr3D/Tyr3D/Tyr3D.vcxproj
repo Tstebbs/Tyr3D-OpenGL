@@ -45,10 +45,6 @@
     <ClInclude Include="src\VertexArray.h" />
     <ClInclude Include="src\VertexBuffer.h" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="fragmentShader.frag" />
-    <None Include="vertexShader.vs" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

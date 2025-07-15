@@ -8,12 +8,11 @@
 namespace Tyr3D
 {
 	Shader::Shader(const std::string& filepathvs,const std::string& filepathfrag)
-		: rendererID(0)
 	{
-		std::string vertShad = ReadShader("res/Shaders/vertexShader.vs");
-		std::string fragShad = ReadShader("res/Shaders/fragmentShader.frag");
+		std::string vertShad = ReadShader(filepathvs);
+		std::string fragShad = ReadShader(filepathfrag);
 		rendererID  = CreateShader(vertShad, fragShad);
-		
+
 	}
 	Shader::~Shader()
 	{
@@ -55,9 +54,9 @@ namespace Tyr3D
 		{
 			shader += line + "\n";
 		}
-	
 		return shader;
 	}
+
 
 	//complies vertex and fragment shader attaches it to a program and returns it 
 	unsigned int Shader::CreateShader(const std::string& vertexShader, const std::string& fragShader)
@@ -65,6 +64,7 @@ namespace Tyr3D
 		unsigned int prog = glCreateProgram();
 		unsigned int vertShad= CompShader(GL_VERTEX_SHADER, vertexShader);
 		unsigned int fragShad = CompShader(GL_FRAGMENT_SHADER, fragShader);
+		
 		
 		//attach shaders to program
 		glAttachShader(prog, vertShad);
@@ -91,4 +91,6 @@ namespace Tyr3D
 		return id;
 		
 	}
+
+	
 }

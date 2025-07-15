@@ -13,9 +13,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Files\Shaders">
-      <UniqueIdentifier>{91e797e6-4f91-48c4-90e2-b8e07c701e94}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core.cpp">
@@ -89,13 +86,5 @@
     <ClInclude Include="src\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="vertexShader.vs">
-      <Filter>Source Files\Shaders</Filter>
-    </None>
-    <None Include="fragmentShader.frag">
-      <Filter>Source Files\Shaders</Filter>
-    </None>
   </ItemGroup>
 </Project>
