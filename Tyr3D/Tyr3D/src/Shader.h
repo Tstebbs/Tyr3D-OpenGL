@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
-#include <glad/glad.h>      
-//#include <glm/glm.hpp>
+#include <glad/glad.h> 
+#include"glm/glm.hpp"
+
 
 
 namespace Tyr3D
@@ -16,6 +17,7 @@ namespace Tyr3D
 		void Unbind() const;
 
 		void SetUniform4f(const std::string& name, float v1,float v2,float v3, float v4) const;
+		void SetUniformMat4(const std::string& name, glm::mat4 matrix) const;
 
 	private:
 		unsigned int rendererID;

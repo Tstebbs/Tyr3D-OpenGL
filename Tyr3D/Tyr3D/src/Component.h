@@ -8,10 +8,15 @@ namespace Tyr3D
 	class Component
 	{
 	public:
+		Component() {};
 		virtual void Start();
 		virtual void Update(float dt);
+
+
+		
 	protected:
 		GameObject* owner;
+
 	};
 
 }

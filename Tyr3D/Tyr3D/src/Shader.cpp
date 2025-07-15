@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 
 namespace Tyr3D
@@ -33,6 +34,11 @@ namespace Tyr3D
 	void Shader::SetUniform4f(const std::string& name, float v1, float v2, float v3, float v4) const
 	{
 		glUniform4f(GetUniformLoc(name), v1, v2, v3, v4);
+	}
+
+	void Shader::SetUniformMat4(const std::string& name,const glm::mat4 matrix) const
+	{
+		glUniformMatrix4fv(GetUniformLoc(name),1, GL_FALSE, glm::value_ptr(matrix));
 	}
 
 	int Shader::GetUniformLoc(const std::string& name) const

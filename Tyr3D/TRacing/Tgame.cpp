@@ -5,6 +5,8 @@
 #include "Renderer.h"
 #include "GameObject.h"
 #include "RenderComponent.h"
+#include "TransformComponent.h"
+#include "Camera.h"
 
 //#include "TransformComponent.h"
 
@@ -17,6 +19,13 @@ int main()
     //test code
    core.CreateWindow(800, 600, "Game");
 
+   Tyr3D::GameObject mainCamOb;
+  
+   auto& camTrans = mainCamOb.AddComponent<Tyr3D::TransformComponent>();
+
+   camTrans->SetPosition(glm::vec3(0,0,10));
+   
+
     float triangleVerts[] = {
         //  pos.x, pos.y,    u,   v
          0.0f,  0.5f,0.0f,     0.5f, 1.0f,  // top
@@ -25,6 +34,7 @@ int main()
     };
     unsigned int triangleIndices[] = { 0, 1, 2 };
 
+    
     // Create the game object and attach components
     //Tyr3D::GameObject triangleGO;
     //Tyr3D::RenderComponent rcomp;

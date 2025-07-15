@@ -15,11 +15,7 @@ namespace Tyr3D
 		RenderComponent(const float* verts, unsigned int vertSize, const unsigned int* indices, unsigned int idxCount);
 		~RenderComponent();
 
-
 		void Draw();
-		void Start();
-		void Update(float dt);
-
 
 	private:
 		VertexArray memVArray;

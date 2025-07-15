@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\src;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\src;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLAD\glad\include;C:\Github Repos\Tyr3D\Tyr3D-OpenGL\Tyr3D\Tyr3D\Libraries\GLM\glm-1.0.1</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

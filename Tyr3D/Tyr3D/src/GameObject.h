@@ -9,6 +9,8 @@ namespace Tyr3D
 	{
 
 	public:
+		GameObject();
+
 		virtual void Start();
 		virtual void Update(float dt);
 

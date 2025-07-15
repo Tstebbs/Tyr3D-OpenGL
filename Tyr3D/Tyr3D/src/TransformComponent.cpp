@@ -53,9 +53,9 @@ namespace Tyr3D
 	{
 		//takes identity matrix and multiplies by translation,rotation and scale
 
-		glm::mat4 Object = glm::translate(glm::mat4(1.0f), position);
-		Object *= glm::mat4_cast(glm::quat(rotation));
-		Object = glm::scale(Object, scale);
-		return Object;
+		glm::mat4 objTrans = glm::translate(glm::mat4(1.0f), position);
+		objTrans *= glm::mat4_cast(glm::quat(rotation));
+		objTrans = glm::scale(objTrans, scale);
+		return objTrans;
 	}
 }

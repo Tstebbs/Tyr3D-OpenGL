@@ -4,6 +4,10 @@
 
 namespace Tyr3D
 {
+	GameObject::GameObject()
+	{
+
+	}
 	void GameObject::Start()
 	{
 		for (auto& component : memberComponents)
