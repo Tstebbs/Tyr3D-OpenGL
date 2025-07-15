@@ -44,9 +44,10 @@ namespace Tyr3D
 
 	void RenderComponent::Draw()
 	{
-		shader.Bind();
+		
 		memVArray.bind();
 		memIBuff.Bind();
+		shader.Bind();
 		glDrawElements(GL_TRIANGLES, memIBuff.GetCount(), GL_UNSIGNED_INT, nullptr);
 		memVArray.unbind();
 	}
